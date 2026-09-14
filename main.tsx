@@ -15,7 +15,7 @@ type WalletState = {
   error: string | null
 }
 
-const IMAGE_URL = '/puzzle-image.jpeg'
+const IMAGE_URL = new URL('./puzzle-image.jpeg', import.meta.url).href
 const WALLET_URL = import.meta.env.VITE_SPHERE_WALLET_URL || 'https://sphere.unicity.network'
 const TREASURY = import.meta.env.VITE_GAME_TREASURY || ''
 const NETWORK = import.meta.env.VITE_SPHERE_NETWORK || 'testnet2'
