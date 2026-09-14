@@ -7,8 +7,10 @@ import './styles.css'
 type Difficulty = 'Easy' | 'Medium' | 'Hard' | 'Expert'
 type Tile = number // 0 is the empty slot; 1..8 are image tiles
 
+type SphereClient = Awaited<ReturnType<typeof autoConnect>>['client']
+
 type WalletState = {
-  client: ConnectClient | null
+  client: SphereClient | null
   connected: boolean
   locked: boolean
   identity: any | null
